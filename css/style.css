@@ -48,6 +48,7 @@ p {
 
 .header.fixed {
     height: auto;
+    
     position: fixed;
 
     background-color: #31344e;
