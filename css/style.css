@@ -46,6 +46,8 @@ p {
     z-index: 1000;
 }
 
+
+
 .header.fixed {
     height: auto;
     
@@ -389,9 +391,19 @@ p {
     background-color: #53354a;
 }
 
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.slick-initialized.reviews__slider {
+    height: auto;
+}
+
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews__photo {
@@ -431,6 +443,47 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    opacity: .5;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
 }
 
 /*#############|___Download___|#############*/
@@ -594,6 +647,30 @@ p {
     /* === Nav === */
     .nav {
         display: none;
+        width: 100%;
+        flex-direction: column;
+
+        /* background-color: #31344e; */
+        background-image: url(../img/intro_bg.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        font-size: 18px;
+    }
+
+    .nav__link,
+    .nav__link:first-child {
+        padding: 12px 25px;   
+    }
+
+    .nav.show {
+        display: flex;
     }
 
     /* === Burger === */
@@ -718,6 +795,10 @@ p {
      .footer__block:last-child {
         margin-bottom: 0;
      }
+     /* === Nav === */ 
+     .nav {
+        padding-bottom: 47px;
+     }
 }
 
 @media (max-width: 580px) {
@@ -735,6 +816,22 @@ p {
     /* === Reviews === */
     .reviews__image {
         right: -120px;
+    }
+}
+
+@media (max-width: 432px) {
+
+    /* === Nav === */
+    .nav {
+        padding-bottom: 104px;
+    }
+}
+
+@media (max-width: 431px) {
+
+    /* === Nav === */
+    .nav {
+        padding-bottom: 104px;
     }
 }
 
